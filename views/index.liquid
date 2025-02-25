@@ -29,3 +29,30 @@
 {% render 'partials/footer.liquid'%}
 {% render 'partials/foot.liquid'%}
 <!-- DE ACTIVITY MOET ALTIJD WORDEN LATEN ZIEN -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>Active Filter {{}} </p>
+
+<ul class="PersonBox">
+  {% for person in persons %}
+    <li class="PersonData">
+      <a href="/student/{{ person.id }}">{{ person.id }}</a>
+      <div class="PersonIcon"></div>
+      <div class="Table"></div>
+    </li>
+  {% endfor %}
+</ul>
