@@ -29,16 +29,16 @@ app.get('/', async function (request, response) {
   })
 })
 
-app.get('/birthdate', async function (request, response) {
+app.get('views/statische-main-pages/birthdate', async function (request, response) {
 
   const personBirthdate = await fetch('https://fdnd.directus.app/items/person/?sort=birthdate')
 
   const personBirthdateJSON = await personBirthdate.json()
   
-  response.render('Birthdate.liquid', {persons: personBirthdateJSON.data})
+  response.render('birthdate.liquid', {persons: personBirthdateJSON.data})
 })
 
-app.get('/a-z', async function (request, response) {
+app.get('views/statische-main-pages/a-z', async function (request, response) {
 
   const personName = await fetch('https://fdnd.directus.app/items/person/?sort=name')
 
