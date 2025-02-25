@@ -29,45 +29,23 @@ app.get('/', async function (request, response) {
   })
 })
 
+app.get('/birthdate', async function (request, response) {
 
+  const personBirthdate = await fetch('https://fdnd.directus.app/items/person/?sort=birthdate')
 
+  const personBirthdateJSON = await personBirthdate.json()
+  
+  response.render('Birthdate.liquid', {persons: personBirthdateJSON.data})
+})
 
+app.get('/a-z', async function (request, response) {
 
+  const personName = await fetch('https://fdnd.directus.app/items/person/?sort=name')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  const personNameJSON = await personName.json()
+  
+  response.render('a-z.liquid', {persons: personNameJSON.data})
+})
 
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {
