@@ -112,6 +112,11 @@ app.get('/hobby/:id', async function (request, response) {
   response.render('statische-main-pages/hobbypage/hobbys.liquid', {hobby: capitalizedHobby, persons: personData.data}); // geef alle data mee aan de liquid html
 }); 
 
+app.get('hobbyfilterkeuze', async function (request, response) {
+
+  response.render('statische-main-pages/hobbypage/hobbysfilterkeuze.liquid'); // geef alle data mee aan de liquid html
+}); 
+
 
 
 
