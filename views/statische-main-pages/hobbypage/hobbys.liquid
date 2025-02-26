@@ -2,7 +2,12 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
-
+    <ul class="PersonBox">
+        {% for person in persons %}
+          <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
+          <div class="PersonIcon"></div>
+          <div class="Table"></div>
+      </ul>
 </main>
 
 
