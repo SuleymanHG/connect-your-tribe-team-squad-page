@@ -13,6 +13,7 @@ html body{
 }
 
 main{
+    padding: 20px 100px 30px 100px;
     .filterKeuze{
         display: flex;
         align-items: center;
@@ -21,8 +22,7 @@ main{
         }
         p.hobbys{
             background-color: #FFE3AF;
-            border: solid;
-            border-radius: 50%;
+            border-radius: 100px;
         }
     }
     ul.filterContentBox{
@@ -30,17 +30,31 @@ main{
         display: grid; 
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         grid-template-rows: 1fr 1fr 1fr 1fr; 
-        gap: 0px 0px; 
-        li{
+        gap: 40px 0px; 
+        margin: 5%;
+        padding: 20px;
+        border-radius: 50px;
+        border-color: none;
+        li, a{
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        a{
+            background-color: #FFE3AF;
+            justify-content: space-around;
+            align-items: center;
+            border-color: none;
+            border-radius: 100px;
+            width: 230px;
+            font-size: 24px;
+        }
     }
-    .backButton{
+    a.backButton{
         background-color: #FFE3AF;
-        border: solid;
-        border-radius: 50%;
+        border-radius: 100px;
+        width: 230px;
+        font-size: 48px;
     }
     img{
         width: 43px;
