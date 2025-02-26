@@ -2,13 +2,12 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
-<h2>TEST</h2>
   <p>Active Filter: </p>
 
   <ul class="PersonBox">
     {% for person in persons %}
       <li class="PersonData">
-        <a href="/student/{{ person.id }}">{{ person.id }}</a>
+        <a href="/student/{{ person.id }}">{{ person.name }}</a>
         <div class="PersonIcon"></div>
         <div class="Table"></div>
       </li>
