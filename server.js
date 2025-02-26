@@ -109,7 +109,7 @@ app.get('/hobby/:id', async function (request, response) {
   const hobbyApiResponse = await fetch(hobbyUrl);
   const personData = await hobbyApiResponse.json();
 
-  response.render('statische-main-pages/hobbypage/hobbyfilterkeuze.liquid', {hobby: capitalizedHobby, persons: personData.data}); // geef alle data mee aan de liquid html
+  response.render('statische-main-pages/hobbypage/hobbysfilterkeuze.liquid', {hobby: capitalizedHobby, persons: personData.data}); // geef alle data mee aan de liquid html
 }); 
 
 
