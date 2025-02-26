@@ -4,12 +4,16 @@ html body{
     width: 100%;
 }
 
+h2{
+    font-size: 100px;
+    color: red;
+ }
+
 header{
 
 }
 
 main{
-
 }
 
 footer{

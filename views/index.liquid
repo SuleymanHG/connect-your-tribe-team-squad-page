@@ -2,27 +2,18 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
+<h2>TEST</h2>
+  <p>Active Filter: </p>
 
-  <h2>Huidige berichten</h2>
-
-  {% for message in messages %}
-    <p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
-  {% else %}
-    <p>Er zijn nog geen berichten voor dit team.</p>
-  {% endfor %}
-
-  <h2>Voeg een bericht toe</h2>
-  <form method="post" action="/">
-    <label>
-      Naam:
-      <input type="text" name="from" required>
-    </label>
-    <label>
-      Bericht:
-      <textarea name="text" required></textarea>
-    </label>
-    <button type="submit">Verstuur</button>
-  </form>
+  <ul class="PersonBox">
+    {% for person in persons %}
+      <li class="PersonData">
+        <a href="/student/{{ person.id }}">{{ person.id }}</a>
+        <div class="PersonIcon"></div>
+        <div class="Table"></div>
+      </li>
+    {% endfor %}
+  </ul>
 
 </main>
 
@@ -33,26 +24,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Active Filter {{}} </p>
-
-<ul class="PersonBox">
-  {% for person in persons %}
-    <li class="PersonData">
-      <a href="/student/{{ person.id }}">{{ person.id }}</a>
-      <div class="PersonIcon"></div>
-      <div class="Table"></div>
-    </li>
-  {% endfor %}
-</ul>
