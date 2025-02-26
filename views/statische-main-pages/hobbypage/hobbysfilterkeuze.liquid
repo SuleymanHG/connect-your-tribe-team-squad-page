@@ -1,6 +1,36 @@
-{% render 'partials/head.liquid', title: 'FDND Homepage' %}
+{% render 'partials/FilterPageHead.liquid', title: 'FDND Filter Keuze' %}
 
 <main>
+    <div class = "filterKeuze">
+        <h2 class="filterIs">Filter:</h2>
+        <p class = "hobbys">Hobby's</p>
+    </div>
+    <ul class = "filterContentBox">
+        <div class="arrow"></div>
+        <li class="muziek">
+            <a href="/hobby/muziek"><img src="images/MuziekIcon" alt="">Muziek<img src="images/MuziekIcon" alt=""></a>
+        </li>
+        <li class="gamen">
+            <a href=""><img src="images/RetroIcon" alt="">Gamen<img src="images/RetroIcon" alt=""></a>
+        </li>
+        <li class="schaken">
+            <a href=""><img src="images/ChessIcon" alt="">Schaken<img src="images/ChessIcon" alt=""></a>
+        </li>
+        <li class="fitness">
+            <a href=""><img src="images/WeightIcon" alt="">Fitness<img src="images/WeightIcon" alt=""></a>
+        </li>
+        <li class="sporten">
+            <a href="images/BallIcon"><img src="" alt="">Sporten<img src="images/BallIcon" alt=""></a>
+        </li>
+        <li class="uitgaan">
+            <a href=""><img src="images/CocktailIcon" alt="">Uitgaan<img src="images/CocktailIcon" alt=""></a>
+        </li>
+        <li class="lezen">
+            <a href=""><img src="images/CocktailIcon" alt="">Lezen<img src="" alt=""></a>
+        </li>
+    </ul>
+
+<a href="index.liquid" class="backButton" aria-label="Back Button">Back</a>
 
 </main>
 

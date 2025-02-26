@@ -29,23 +29,106 @@ app.get('/', async function (request, response) {
   })
 })
 
-app.get('views/statische-main-pages/birthdate', async function (request, response) {
+app.get('/birthdate', async function (request, response) {
 
   const personBirthdate = await fetch('https://fdnd.directus.app/items/person/?sort=birthdate')
 
   const personBirthdateJSON = await personBirthdate.json()
   
-  response.render('birthdate.liquid', {persons: personBirthdateJSON.data})
+  response.render('statische-main-pages/birthdate.liquid', {persons: personBirthdateJSON.data})
 })
 
-app.get('views/statische-main-pages/a-z', async function (request, response) {
+app.get('/a-z', async function (request, response) {
 
   const personName = await fetch('https://fdnd.directus.app/items/person/?sort=name')
 
   const personNameJSON = await personName.json()
   
-  response.render('a-z.liquid', {persons: personNameJSON.data})
+  response.render('statische-main-pages/a-z.liquid', {persons: personNameJSON.data})
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/hobby/:id', async function (request, response) {
+  const hobby = request.params.id; // Pak de hobby van de URL
+
+  // Geef hoofdletter mee aan elke hobby (geen idee hoe dit werkte, De data lukte maar niet omdat hij het met lage letter pakte, Ik heb chatgpt gevraagd voor een fix)
+  const capitalizedHobby = hobby.charAt(0).toUpperCase() + hobby.slice(1).toLowerCase();
+
+  // Pak data voor geselecteerde hobby
+  const hobbyUrl = `https://fdnd.directus.app/items/person/?filter={"fav_hobby":"${capitalizedHobby}"}`;
+  const hobbyApiResponse = await fetch(hobbyUrl);
+  const personData = await hobbyApiResponse.json();
+
+  response.render('hobbyfilterkeuze.liquid', {hobby: capitalizedHobby, persons: personData.data}); // geef alle data mee aan de liquid html
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.post('/', async function (request, response) {
   await fetch('https://fdnd.directus.app/items/messages/', {

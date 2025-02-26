@@ -1,0 +1,49 @@
+html body{
+    background-color: #3A4F3B;
+    color: black;
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+main{
+    .filterKeuze{
+        display: flex;
+        align-items: center;
+        h2.filterIs{
+            font-size: 48px;
+        }
+        p.hobbys{
+            background-color: #FFE3AF;
+            border: solid;
+            border-radius: 50%;
+        }
+    }
+    ul.filterContentBox{
+        background-color: #4F674C;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .backButton{
+        background-color: #FFE3AF;
+        border: solid;
+        border-radius: 50%;
+    }
+    img{
+        width: 43px;
+        height: 43px;
+    }
+}
