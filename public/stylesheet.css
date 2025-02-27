@@ -57,71 +57,28 @@ header {
     top: 0;
     margin: 0;
 
-    nav {
-        display: grid;
-        grid-template-columns: 3;
-        grid-template-rows: 1;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        text-align: center;
-        place-items: center center;
+    nav{
+        display: flex;
+        justify-content: end;
+        margin-right: 10%;
     }
-
-    li {
-        text-align: center;
-    }
-
-    .button-dark {
-        grid-area: 1 / 2 / 2 / 3;
-        justify-self: end;
-        margin: 0 0.5rem 0 1rem;
-    }
+    
 
     /* Hamburger menu styles */
     .ham-menu {
-        grid-area: 1 / 3 / 2 / 4;
-        width: 4em;
-        height: 4em;
+        width: 5.5em;
+        height: 5.5em;
         position: relative;
         z-index: 101;
         cursor: pointer;
         border: none;
         background-color: var(--main-color);
-        
-        span {
-            height: 0.3em;
-            width: 60%;
-            border-radius: 10px;
-            background-color: var(--second-color);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: transform 0.4s ease, opacity 0.4s ease;
-            
+        border-radius: 50%;
 
-            &:nth-child(1) {
-                top: 25%;
-
-                .active &:nth-child(1) {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(45deg);
-                }
-            }
-
-            .active &:nth-child(2) {
-                opacity: 0;
-            }
-
-            &:nth-child(3) {
-                top: 75%;
-
-                .active &:nth-child(3) {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(-45deg);
-                }
-            }
+        svg path{
+            fill: var(--second-color);
         }
+        
     }
 
     .ham-items {
