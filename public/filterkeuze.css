@@ -29,7 +29,7 @@ main{
             font-size: var(--h1);
             color: var(--main-color);
         }
-        p.hobbys{
+        p.button{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -53,7 +53,7 @@ main{
             border-bottom: 50px solid #4F674C;
         }
     }
-    ul.filterContentBox{
+    ul.hobbyContentBox{
         background-color: #4F674C;
         border-radius: 50px;
         border-color: none;
@@ -102,6 +102,57 @@ main{
             font-size: var(--h2);
         }
     }
+    ul.boekenContentBox{
+        background-color: #4F674C;
+        border-radius: 50px;
+        border-color: none;
+        padding: 20px;
+        @media (min-width: 0px) {
+            gap: 30px 0px; 
+            height: 70%;
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr; 
+        }
+        @media (min-width: 690px) {
+            gap: 20px 0px; 
+            height: 550px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+        }
+        @media (min-width: 940px) {
+            gap: 20px 0px; 
+            height: 550px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+        }
+        @media (min-width: 1275px) {
+            gap: 20px 0px; 
+            height: 450px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+        }
+        li, a{
+            transform: rotate(-90deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a{
+            justify-content: space-around;
+            align-items: center;
+            font-size: var(--h2);
+            color: 	var(--alt-text-color);
+            font-weight: var(--bold);
+            transform: rotate(1deg);
+            position: relative;
+            right: 130px;
+            top: 5px;
+        }
+    }
     .button{
         display: flex;
         justify-content: center;
@@ -117,8 +168,14 @@ main{
             justify-content: center
         }
     }
-    img{
+    img.imgForHobbyPage{
         width: 35px;
         height: 35px;
+    }
+    img.imgForBoekenPage{
+        width: 211px;
+        height: 181px;
+        position: relative;
+        transform: rotate(90deg);
     }
 }

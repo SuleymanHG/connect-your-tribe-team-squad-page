@@ -1,6 +1,33 @@
-{% render 'partials/head.liquid', title: 'FDND Filter Keuze' %}
+{% render 'partials/filterPageHead.liquid', title: 'FDND Filter Keuze' %}
+{% render 'partials/header.liquid', mainheading: '' %}
 
 <main>
+    <div class="filterKeuze">
+        <h2 class="filterIs">Filter:</h2>
+        <p class="button">Boeken</p>
+        <div class="arrow"></div>
+    </div>
+    <ul class="boekenContentBox">
+        <li class="drama">
+            <img src="images/Boek.png" alt="" class="imgForBoekenPage">
+            <a href="/genre/drama">Drama</a>
+        </li>
+        <li class="thriller">
+            <img src="images/Boek.png" alt="" class="imgForBoekenPage">
+            <a href="/genre/thriller">Thriller</a>
+        </li>
+        <li class="comedy">
+            <img src="images/Boek.png" alt="" class="imgForBoekenPage">
+            <a href="/genre/comedy">Comedy</a>
+        </li>
+        <li class="action">
+            <img src="images/Boek.png" alt="" class="imgForBoekenPage">
+            <a href="/genre/action">Action</a>
+        </li>
+    </ul>
+<div class="button">
+    <a href="/" class="backButton" aria-label="Back Button">Back</a>
+</div>
 
 </main>
 

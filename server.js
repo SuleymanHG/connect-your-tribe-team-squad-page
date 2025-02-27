@@ -99,10 +99,11 @@ app.get('/a-z', async function (request, response) {
 
 
 
+
 app.get('/hobby/:id', async function (request, response) {
   const hobby = request.params.id; // Pak de hobby van de URL
 
-  // Geef hoofdletter mee aan elke hobby (geen idee hoe dit werkte, De data lukte maar niet omdat hij het met lage letter pakte, Ik heb chatgpt gevraagd voor een fix)
+  // Geef hoofdletter mee aan elke hobby 
   const capitalizedHobby = hobby.charAt(0).toUpperCase() + hobby.slice(1).toLowerCase();
 
   // Pak data voor geselecteerde hobby
@@ -117,6 +118,25 @@ app.get('/hobbyfilterkeuze', async function (request, response) {
 
   response.render('statische-main-pages/hobbypage/hobbysfilterkeuze.liquid' ); // geef alle data mee aan de liquid html
 }); 
+
+
+app.get('/boek/:id', async function (request, response) {
+  const genre = request.params.id; // Pak de genre van de URL
+
+  const capitalizedGenre = genre.charAt(0).toUpperCase() + genre.slice(1).toLowerCase();
+
+  const genreUrl = `https://fdnd.directus.app/items/person/?filter={"fav_genre":"${capitalizedGenre}"}`;
+  const genreApiResponse = await fetch(genreUrl);
+  const personData = await genreApiResponse.json();
+
+  response.render('statische-main-pages/boekenpage/boeken.liquid', {genre: capitalizedGenre, persons: personData.data}); // geef alle data mee aan de liquid html
+}); 
+
+app.get('/genreboekenkeuze', async function (request, response) {
+
+  response.render('statische-main-pages/boekenpage/boekenfilterkeuze.liquid' ); // geef alle data mee aan de liquid html
+}); 
+
 
 
 
