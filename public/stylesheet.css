@@ -13,6 +13,7 @@ body{
        --h2: x-large;
        --h3: large;
        --p: 18px;
+       --back-button-font: 48px;
 
     /*font-weight*/
        --bold: 800;
@@ -24,6 +25,10 @@ body{
        --second-color: #3A4F3B;
        --detail-color: #572F19;
        --last-active-color: #A60000;
+
+    /*Buttons*/
+        --big-button-size: 381px;
+        --mid-button-size: 229px;
 }
 
 footer{
