@@ -1,0 +1,78 @@
+html{
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    } 
+
+body{
+
+    /*fonts*/  
+       --main-font: 'PurplePurse';
+
+    /* font-size-headings */
+       --h1: xx-large;
+       --h2: x-large;
+       --h3: large;
+       --p: 18px;
+
+    /*font-weight*/
+       --bold: 800;
+       --semi-bold: 600;
+       --normal: 400;
+
+    /*colors*/
+       --main-color: #FFE3AF;
+       --second-color: #3A4F3B;
+       --detail-color: #572F19;
+       --last-active-color: #A60000;
+}
+
+
+
+.profile-card{
+    background-color: var(--main-color);
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 6rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.geboortedatum{
+    width: 150px;
+    height: 50px;
+    background-color: var(--second-color);
+    border-radius: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.vind-ik-leuk{
+    width: 150px;
+    height: 50px;
+    background-color: var(--second-color);
+    border-radius: 30px;
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+}
+
+.gezicht{
+    background-color: var(--second-color);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-top: 30px;
+}
+
+.lichaam{
+    background-color: var(--second-color);
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: 10px;
+}
