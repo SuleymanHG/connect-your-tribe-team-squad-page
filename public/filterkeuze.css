@@ -41,12 +41,23 @@ main{
             height: 50px;
             margin-left: 40px;
         }
+        .arrow{
+            width: 0; 
+            height: 0; 
+            position: relative;
+            top: 50px;
+            left: -140px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            
+            border-bottom: 50px solid #4F674C;
+        }
     }
     ul.filterContentBox{
         background-color: #4F674C;
         border-radius: 50px;
         border-color: none;
-        margin: 5%;
+        margin: ;
         padding: 20px;
         @media (min-width: 0px) {
             gap: 30px 0px; 
