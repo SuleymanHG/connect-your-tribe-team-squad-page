@@ -1,3 +1,32 @@
+html{
+    background-color: white;
+    margin: 0;
+    width: 100%;
+    } 
+
+body{
+
+    /*fonts*/  
+       --main-font: 'PurplePurse';
+
+    /* font-size-headings */
+       --h1: xx-large;
+       --h2: x-large;
+       --h3: large;
+       --p: 18px;
+
+    /*font-weight*/
+       --bold: 800;
+       --semi-bold: 600;
+       --normal: 400;
+
+    /*colors*/
+       --main-color: #FFE3AF;
+       --second-color: #3A4F3B;
+       --detail-color: #572F19;
+       --last-active-color: #A60000;
+}
+
 footer{
     p.madeByText{
         position: absolute;

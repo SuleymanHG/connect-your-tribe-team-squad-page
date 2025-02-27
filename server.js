@@ -98,6 +98,7 @@ app.get('/a-z', async function (request, response) {
 
 
 
+
 app.get('/hobby/:id', async function (request, response) {
   const hobby = request.params.id; // Pak de hobby van de URL
 

@@ -1,0 +1,32 @@
+<<<<<<< Updated upstream
+=======
+html body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+
+    
+}
+
+header{
+
+}
+
+main{
+}
+
+footer{
+    p.madeByText{
+        position: absolute;
+        bottom: 0;
+        margin-left: 5px;
+        span.Rad{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+}
+
+
+>>>>>>> Stashed changes
