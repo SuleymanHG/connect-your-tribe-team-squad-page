@@ -1,8 +1,16 @@
-html{
-    background-color: white;
+html, body{
     margin: 0;
-    width: 100%;
-    } 
+    padding: 0;
+    font-family: var(--main-font);
+
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
 
 body{
     /*fonts*/  
@@ -31,23 +39,9 @@ body{
         --mid-button-size: 229px;
 }
 
-footer{
-    p.madeByText{
-        position: absolute;
-        bottom: 0;
-        margin-left: 5px;
-        span.Rad{
-            color: red;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    }
+h1{
+    font-size: var(--h1);
 }
-
-
-
-
-
-
 
 /* Navigation bar code */
 header {

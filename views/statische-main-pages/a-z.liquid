@@ -2,15 +2,22 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
-    <ul class="PersonBox">
-        {% for person in persons %}
-          <li class="PersonData">
-            <a href="/student/{{ person.id }}">{{ person.name }}</a>
-            <div class="PersonIcon"></div>
-            <div class="Table"></div>
-          </li>
-        {% endfor %}
-      </ul>
+  <p>Active Filter: </p>
+  <p class="azButton">A-z</p>
+
+  <ul class="contentBox">
+    {% for person in persons %}
+    <li class="personData">
+        <div class="gezicht"></div>
+        <div class="lichaam"></div>
+        <img src="images/Bookshelfklein.png" alt="" class="bookShelfKlein">
+        <a href="/student/{{ person.id }}">
+            <p class="name">{{ person.name }}</p>
+         </a>
+    </li>
+    {% endfor %}
+  </ul>
+
 </main>
 
 {% render 'partials/footer.liquid'%}

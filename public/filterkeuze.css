@@ -1,16 +1,5 @@
 html, body{
     background-color: var(--second-color);
-    margin: 0;
-    padding: 0;
-    font-family: var(--main-font);
-    height: 100%;
-    li{
-        list-style: none;
-    }
-    a{
-        text-decoration: none;
-        color: black;
-    }
 }
 
 main{

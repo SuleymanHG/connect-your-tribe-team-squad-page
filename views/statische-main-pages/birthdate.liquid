@@ -2,15 +2,23 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
-    <ul class="PersonBox">
-        {% for person in persons %}
-          <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
-          <div class="PersonIcon"></div>
-          <div class="Table"></div>
-        {% else %}
-          <li>Geen personen gevonden met deze hobby.</li>
-        {% endfor %}
-      </ul>
+  <p>Active Filter: </p>
+  <p class="birthdateButton">Birthdate</p>
+
+  <ul class="contentBox">
+    {% for person in persons %}
+    <li class="personData">
+        <div class="gezicht"></div>
+        <div class="lichaam"></div>
+        <img src="images/Bookshelfklein.png" alt="" class="bookShelfKlein">
+        <a href="/student/{{ person.id }}">
+            <p class="birtdate">{{ person.birthdate | date: "%d-%m-%Y"}}</p>
+            <p class="name">{{ person.name }}</p>
+         </a>
+    </li>
+    {% endfor %}
+  </ul>
+
 </main>
 
 {% render 'partials/footer.liquid'%}

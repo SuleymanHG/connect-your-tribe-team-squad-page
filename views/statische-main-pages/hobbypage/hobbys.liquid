@@ -2,18 +2,28 @@
 {% render 'partials/header.liquid', mainheading: 'FDND' %}
 
 <main>
-    <h2>Iedereen met de hobby: {{ hobby }}</h2>
-    <ul>
-        {% for person in persons %}
-          <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
-        {% else %}
-          <li>Geen personen gevonden met deze hobby.</li>
-        {% endfor %}
-      </ul>
+  <h2>Iedereen met de hobby: {{ hobby }}</h2>
+  <ul class="contentBox">
+    {% for person in persons %}
+    <li class="personData">
+        <div class="gezicht"></div>
+        <div class="lichaam"></div>
+        <img src="images/Bookshelfklein.png" alt="" class="bookShelfKlein">
+        <a href="/student/{{ person.id }}">
+            <p class="name">{{ person.name }}</p>
+         </a>
+    </li>
+    {% else %}
+      <li>Geen personen gevonden met deze hobby.</li>
+    {% endfor %}
+  </ul>
+  <div class="button">
+    <a href="/hobbyfilterkeuze" class="backButton" aria-label="Back Button">Back</a>
+  </div>
 </main>
 
 
-{% render 'partials/footer.liquid'%}
+
 {% render 'partials/foot.liquid'%}
 
 <!-- DIT IS DUS DE HOBBY PAGE EN NIET DE HOBBY FILTER PAGE (Zie figma welke pagina wat is)-->

@@ -3,13 +3,15 @@
 
 <main>
   <p>Active Filter: </p>
+  <p class="birthdateButton">Birthdate</p>
 
   <ul class="PersonBox">
     {% for person in persons %}
       <li class="PersonData">
-        <a href="/student/{{ person.id }}">{{ person.name }}</a>
-        <div class="PersonIcon"></div>
-        <div class="Table"></div>
+        <a href="/student/{{ person.id }}">{{ person.name }} <p>{{ person.birthdate | date: "%d-%m-%Y"}}</p></a>
+        <div class="gezicht"></div>
+        <div class="lichaam"></div>
+        <img src="">
       </li>
     {% endfor %}
   </ul>
