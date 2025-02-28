@@ -66,11 +66,20 @@ header {
         z-index: 101;
         cursor: pointer;
         border: none;
-        background-color: var(--main-color);
+        background-color: var(--second-color);
         border-radius: 50%;
 
+        &:hover{
+            background-color: var(--main-color);
+        }
+
         svg path{
-            fill: var(--second-color);
+            fill: var(--main-color);
+
+            &:hover{
+                fill:var(--second-color);
+            }
+
         }
         
     }
@@ -93,9 +102,7 @@ header {
         gap: 2em;
         font-size: 1.5em;
         z-index: 100;
-       
         border-radius: var(--border-radius);
-        
 
 
         &.active {
@@ -109,7 +116,7 @@ header {
             @media (min-width:640px){
                 grid-template-columns: repeat(2,auto);
             }
-            
+
         }
 
         li{
