@@ -93,18 +93,37 @@ header {
         gap: 2em;
         font-size: 1.5em;
         z-index: 100;
-        top: 3em;
+       
         border-radius: var(--border-radius);
+        
 
 
         &.active {
+            display: grid;
+            grid-template-columns: repeat(1,auto);
+            justify-content: center;
             margin:0;
             top: 0;
             right: 0;
+
+            @media (min-width:640px){
+                grid-template-columns: repeat(2,auto);
+            }
+            
         }
 
+        li{
+            background-color: var(--main-color);   
+            width:500px;
+            height: 100px;
+            border-radius: 100px;
+            text-align: center;
+            align-content: center;
+
+        }
         a {
-            color: var(--main-background-color);
+            color: var(--second-color);
+            text-decoration: none; 
         }
     }
 
