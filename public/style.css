@@ -57,7 +57,10 @@ main{
 }
 
 .button{
-    position: sticky;
+    position: fixed;
+    bottom: 20px;
+    left: 35%;
+    z-index: 1;
     display: flex;
     justify-content: center;
     a.backButton{
