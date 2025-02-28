@@ -1,5 +1,5 @@
 # Squad Page
-Neem hier <!-- LINK TOEVOEGEN --> een kijkje op onze squadpage!
+Neem [hier](https://connect-your-tribe-team-squad-page-uko4.onrender.com/) een kijkje op onze squadpage!
 
 ## Inhoudsopgave Squad page
 
@@ -12,7 +12,7 @@ Neem hier <!-- LINK TOEVOEGEN --> een kijkje op onze squadpage!
 
 ## Beschrijving
 ![poster readme](https://github.com/user-attachments/assets/57fa9d57-e04a-4d83-9762-5b3e4f7cf63d)
-In deze squadpage kan je je klasgenoten (?) vinden en leuke feitjes over hun, filteren op hobby en favoriete boek genre, elkaar een like geven en berichtjes bij elkaar posten.
+In deze squadpage kan je je klasgenoten en jaargenoten + docenten vinden en leuke feitjes over hun, filteren op hobby en favoriete boek genre, elkaar een like geven en berichtjes bij elkaar posten.
 
 ### Ontwerpkeuzes
 We hebben als inspiratie voor de groene kleuren en het lettertype een krijtbord van de basisschool genomen. Zo willen we een heerlijk rustig maar nostalgisch gevoel creeëren. De kleuren zijn goed gekeurd door de contrast checker. 
